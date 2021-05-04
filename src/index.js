@@ -4,7 +4,7 @@ import React from 'react';
 function App() {
     return (
         <>
-            <div class="overlay escondido">
+            <div class="overlay">
                 <div class="confirmar-pedido">
                     <div class="titulo">Confirme seu pedido</div>
                     <ul>
@@ -39,8 +39,8 @@ function App() {
                 <div class="secao">
                     <div class="titulo">Primeiro, seu prato</div>
                     <div class="opcoes pratos">
-                        <div class="opcao prato-frango" onclick="selecionarPrato('.prato-frango', 'Frango Yin Yang', 14.90)">
-                            <img alt="Comida boa" src="img/frango_yin_yang.png" />
+                        <div class="opcao">
+                            <img alt="Frango Yin Yang" src="imgs/frango_yin_yang.png" />
                             <div class="titulo">Frango Yin Yang</div>
                             <div class="descricao">Um pouco de batata, um pouco de salada</div>
                             <div class="preco">R$ 14,90</div>
@@ -49,20 +49,20 @@ function App() {
                             </div>
                         </div>
 
-                        <div class="opcao prato-carne" onclick="selecionarPrato('.prato-carne', 'Carne Yin Yang', 17.90)">
-                            <img alt="Comida boa" src="img/frango_yin_yang.png" />
-                            <div class="titulo">Carne Yin Yang</div>
-                            <div class="descricao">Um pouco de batata, um pouco de salada</div>
+                        <div class="opcao">
+                            <img alt="Hamburguer" src="imgs/hamburguer.jpg" />
+                            <div class="titulo">Hamburguer Gostoso</div>
+                            <div class="descricao">Carne de primeira</div>
                             <div class="preco">R$ 17,90</div>
                             <div class="check">
                                 <ion-icon name="checkmark-circle"></ion-icon>
                             </div>
                         </div>
 
-                        <div class="opcao prato-peixe" onclick="selecionarPrato('.prato-peixe', 'Peixe Yin Yang', 16.90)">
-                            <img alt="Comida boa" src="img/frango_yin_yang.png" />
-                            <div class="titulo">Peixe Yin Yang</div>
-                            <div class="descricao">Um pouco de batata, um pouco de salada</div>
+                        <div class="opcao">
+                            <img alt="Yakisoba" src="imgs/yakisoba.jpeg" />
+                            <div class="titulo">Yakisobão</div>
+                            <div class="descricao">Bastante macarrão</div>
                             <div class="preco">R$ 16,90</div>
                             <div class="check">
                                 <ion-icon name="checkmark-circle"></ion-icon>
@@ -74,8 +74,8 @@ function App() {
                 <div class="secao">
                     <div class="titulo">Agora, sua bebida</div>
                     <div class="opcoes bebidas">
-                        <div class="opcao bebida-coca" onclick="selecionarBebida('.bebida-coca', 'Coquinha gelada', 6.90)">
-                            <img alt="Comida boa" src="img/coquinha_gelada.png" />
+                        <div class="opcao">
+                            <img alt="Lata de coca-cola" src="imgs/coquinha_gelada.png" />
                             <div class="titulo">Coquinha gelada</div>
                             <div class="descricao">Lata 350ml</div>
                             <div class="preco">R$ 6,90</div>
@@ -84,20 +84,20 @@ function App() {
                             </div>
                         </div>
 
-                        <div class="opcao bebida-guarana" onclick="selecionarBebida('.bebida-guarana', 'Guaraná gelado', 4.90)">
-                            <img alt="Comida boa" src="img/coquinha_gelada.png" />
-                            <div class="titulo">Guaraná gelado</div>
-                            <div class="descricao">Lata 350ml</div>
+                        <div class="opcao">
+                            <img alt="Suco de laranja" src="imgs/suco-de-laranja.png" />
+                            <div class="titulo">Suco de laranja</div>
+                            <div class="descricao">Laranja fresquinha</div>
                             <div class="preco">R$ 4,90</div>
                             <div class="check">
                                 <ion-icon name="checkmark-circle"></ion-icon>
                             </div>
                         </div>
 
-                        <div class="opcao bebida-suco" onclick="selecionarBebida('.bebida-suco', 'Suquinho gelado', 7.90)">
-                            <img alt="Comida boa" src="img/coquinha_gelada.png" />
-                            <div class="titulo">Suquinho gelado</div>
-                            <div class="descricao">500ml</div>
+                        <div class="opcao">
+                            <img alt="Copo com água" src="imgs/copo-agua.jpg" />
+                            <div class="titulo">Copo com água</div>
+                            <div class="descricao">Água normal</div>
                             <div class="preco">R$ 7,90</div>
                             <div class="check">
                                 <ion-icon name="checkmark-circle"></ion-icon>
@@ -109,8 +109,8 @@ function App() {
                 <div class="secao">
                     <div class="titulo">Por fim, sua sobremesa</div>
                     <div class="opcoes sobremesas">
-                        <div class="opcao sobremesa-pudim" onclick="selecionarSobremesa('.sobremesa-pudim', 'Pudim', 7.90)">
-                            <img alt="Comida boa" src="img/pudim.png" />
+                        <div class="opcao">
+                            <img alt="Pudim" src="imgs/pudim.png" />
                             <div class="titulo">Pudim</div>
                             <div class="descricao">Apenas um pudim</div>
                             <div class="preco">R$ 7,90</div>
@@ -119,19 +119,19 @@ function App() {
                             </div>
                         </div>
 
-                        <div class="opcao sobremesa-mousse" onclick="selecionarSobremesa('.sobremesa-mousse', 'Mousse', 6.90)">
-                            <img alt="Comida boa" src="img/pudim.png" />
-                            <div class="titulo">Mousse</div>
-                            <div class="descricao">Cremoso, gostoso</div>
+                        <div class="opcao">
+                            <img alt="Sagu" src="imgs/sagu.jpg" />
+                            <div class="titulo">Sagu</div>
+                            <div class="descricao">Sagu de vinho</div>
                             <div class="preco">R$ 6,90</div>
                             <div class="check">
                                 <ion-icon name="checkmark-circle"></ion-icon>
                             </div>
                         </div>
 
-                        <div class="opcao sobremesa-brownie" onclick="selecionarSobremesa('.sobremesa-brownie', 'Brownie', 4.90)">
-                            <img alt="Comida boa" src="img/pudim.png" />
-                            <div class="titulo">Brownie</div>
+                        <div class="opcao">
+                            <img alt="Bolo de chocolate" src="imgs/bolo-chocolate.jpg" />
+                            <div class="titulo">Bolo de Chocolate</div>
                             <div class="descricao">É um bolinho</div>
                             <div class="preco">R$ 4,90</div>
                             <div class="check">
