@@ -1,6 +1,6 @@
 export default function ConfirmScreen(props) {
     return (
-        <div class="overlay">
+        <div class="overlay hidden">
             <div class="confirmar-pedido">
                 <div class="titulo">Confirme seu pedido</div>
                 <ul>

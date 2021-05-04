@@ -87,18 +87,37 @@ body {
     justify-content: space-between;
   }
   
-  .menu .secao .opcoes .opcao .preco {
-    font-weight: bold;
+  .menu .secao .opcoes .opcao .preco span {
     font-size: 16px;
   }
-  
-  .opcao .check {
-    opacity: 0;
-    color: #32B72F;
-    font-size: 20px;
+
+  .preco{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
   
-  .menu .secao .opcoes .opcao.selecionado .check {
+  .opcao .contador {
+    opacity: 0;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .opcao .contador span{
+    margin: 0 2px;
+  }
+  
+  .contador ion-icon:first-of-type{
+    color: red;
+  }
+
+  .contador ion-icon:last-of-type{
+    color: green;
+  }
+
+  .menu .secao .opcoes .opcao.selecionado .contador {
     opacity: 1;
   }
   
@@ -206,4 +225,8 @@ body {
     background-color: transparent;
     font-size: 20px;
     margin-top: 10px;
+  }
+
+  .hidden{
+    display: none;
   }
