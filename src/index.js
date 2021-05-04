@@ -1,5 +1,6 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
+import MenuOption from './MenuOption';
 
 function App() {
     return (
@@ -38,77 +39,29 @@ function App() {
             <div class="menu">
                 <div class="secao">
                     <div class="titulo">Primeiro, seu prato</div>
-                    <div class="opcoes pratos">
-                        <div class="opcao">
-                            <img alt="Frango Yin Yang" src="imgs/frango_yin_yang.png" />
-                            <div class="titulo">Frango Yin Yang</div>
-                            <div class="descricao">Um pouco de batata, um pouco de salada</div>
-                            <div class="preco">R$ 14,90</div>
-                            <div class="check">
-                                <ion-icon name="checkmark-circle"></ion-icon>
-                            </div>
-                        </div>
+                    <div class="opcoes">
 
-                        <div class="opcao">
-                            <img alt="Hamburguer" src="imgs/hamburguer.jpg" />
-                            <div class="titulo">Hamburguer Gostoso</div>
-                            <div class="descricao">Carne de primeira</div>
-                            <div class="preco">R$ 17,90</div>
-                            <div class="check">
-                                <ion-icon name="checkmark-circle"></ion-icon>
-                            </div>
-                        </div>
+                        <MenuOption alt="Frango Yin Yang" src="imgs/frango_yin_yang.png" title="Frango Yin Yang" description="Um pouco de batata, um pouco de salada" price="14.90" />
+                        <MenuOption alt="Hamburguer" src="imgs/hamburguer.jpg" title="Hamburguer Gostoso" description="Carne de primeira" price="17.90" />
+                        <MenuOption alt="Yakisoba" src="imgs/yakisoba.jpeg" title="Yakisobão" description="Bastante macarrão" price="16.90" />
 
-                        <div class="opcao">
-                            <img alt="Yakisoba" src="imgs/yakisoba.jpeg" />
-                            <div class="titulo">Yakisobão</div>
-                            <div class="descricao">Bastante macarrão</div>
-                            <div class="preco">R$ 16,90</div>
-                            <div class="check">
-                                <ion-icon name="checkmark-circle"></ion-icon>
-                            </div>
-                        </div>
                     </div>
                 </div>
 
                 <div class="secao">
                     <div class="titulo">Agora, sua bebida</div>
-                    <div class="opcoes bebidas">
-                        <div class="opcao">
-                            <img alt="Lata de coca-cola" src="imgs/coquinha_gelada.png" />
-                            <div class="titulo">Coquinha gelada</div>
-                            <div class="descricao">Lata 350ml</div>
-                            <div class="preco">R$ 6,90</div>
-                            <div class="check">
-                                <ion-icon name="checkmark-circle"></ion-icon>
-                            </div>
-                        </div>
+                    <div class="opcoes">
 
-                        <div class="opcao">
-                            <img alt="Suco de laranja" src="imgs/suco-de-laranja.png" />
-                            <div class="titulo">Suco de laranja</div>
-                            <div class="descricao">Laranja fresquinha</div>
-                            <div class="preco">R$ 4,90</div>
-                            <div class="check">
-                                <ion-icon name="checkmark-circle"></ion-icon>
-                            </div>
-                        </div>
+                        <MenuOption alt="Lata de coca-cola" src="imgs/coquinha_gelada.png" title="Coquinha gelada" description="Lata 350ml" price="6.90" />
+                        <MenuOption alt="Suco de laranja" src="imgs/suco-de-laranja.png" title="Suco de laranja" description="Laranja fresquinha" price="4.90" />
+                        <MenuOption alt="Copo com água" src="imgs/copo-agua.jpg" title="Copo com água" description="Água normal" price="7.90" />
 
-                        <div class="opcao">
-                            <img alt="Copo com água" src="imgs/copo-agua.jpg" />
-                            <div class="titulo">Copo com água</div>
-                            <div class="descricao">Água normal</div>
-                            <div class="preco">R$ 7,90</div>
-                            <div class="check">
-                                <ion-icon name="checkmark-circle"></ion-icon>
-                            </div>
-                        </div>
                     </div>
                 </div>
 
                 <div class="secao">
                     <div class="titulo">Por fim, sua sobremesa</div>
-                    <div class="opcoes sobremesas">
+                    <div class="opcoes">
                         <div class="opcao">
                             <img alt="Pudim" src="imgs/pudim.png" />
                             <div class="titulo">Pudim</div>
