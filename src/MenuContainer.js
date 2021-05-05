@@ -2,8 +2,8 @@ import MenuOption from "./MenuOption";
 
 export default function MenuContainer(props) {
 
-    const { title, content } = props;
-
+    console.log(props);
+    const { title, content } = props.data;
 
 
     return (
