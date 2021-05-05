@@ -4,46 +4,50 @@ import React, { useState } from 'react';
 
 export default function MenuOption(props) {
 
-    function selectFunction(e) {
+    function select(element){
+        element.classList.toggle("selecionado");
+    }
+
+    function selectFunction(id) {
         if (!selected) {
-            e.currentTarget.classList.add("selecionado");
+            const opcaoSelecionada = document.querySelector("#"+id);
+            select(opcaoSelecionada);
             setSelected(true);
             setValue(1);
         }
     }
 
-    function calcValue(e, op) {
-
-        const opcaoSelecionada = e.currentTarget.parentNode.parentNode.parentNode;
-
+    function calcValue(id, op) {
+        const opcaoSelecionada = document.querySelector("#"+id);
         if (op === "-") {
             setValue(value - 1);
             if (value === 1) {
-                opcaoSelecionada.classList.remove("selecionado");
+                select(opcaoSelecionada);
                 setSelected(false);
             }
-        }
-
-        if (op === "+") {
+        }else{
             setValue(value + 1);
         }
     }
+
 
     const { alt, src, title, description, price } = props;
     const [value, setValue] = useState(1);
     const [selected, setSelected] = useState(false);
 
+    const idOpcao = title.replaceAll(" ", "");
+
     return (
-        <div class="opcao" onClick={(e) => selectFunction(e)}>
+        <div class="opcao" id={idOpcao} onClick={() => selectFunction(idOpcao)}>
             <img alt={alt} src={src} />
             <div class="titulo">{title}</div>
             <div class="descricao">{description}</div>
             <div class="preco">
                 <span>R$ {price}</span>
                 <div class="contador">
-                    <ion-icon onClick={(e) => calcValue(e, "-")} name="remove-outline"></ion-icon>
+                    <ion-icon onClick={() => calcValue(idOpcao,"-")} name="remove-outline"></ion-icon>
                     <span>{value}</span>
-                    <ion-icon onClick={(e) => calcValue(e, "+")} name="add-outline"></ion-icon>
+                    <ion-icon onClick={() => calcValue(idOpcao,"+")} name="add-outline"></ion-icon>
                 </div>
             </div>
         </div>
