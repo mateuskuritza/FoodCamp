@@ -5,22 +5,25 @@ import React, { useState } from 'react';
 export default function MenuOption(props) {
 
     function selectFunction(e) {
-        const elementClasses = e.currentTarget.classList;
         if (!selected) {
-            elementClasses.add("selecionado");
+            e.currentTarget.classList.add("selecionado");
             setSelected(true);
             setValue(1);
         }
-        if (selected && value === 0) {
-            elementClasses.remove("selecionado");
-            setSelected(false);
-        }
     }
 
-    function calcValue(op) {
+    function calcValue(e, op) {
+
+        const opcaoSelecionada = e.currentTarget.parentNode.parentNode.parentNode;
+
         if (op === "-") {
             setValue(value - 1);
+            if (value === 1) {
+                opcaoSelecionada.classList.remove("selecionado");
+                setSelected(false);
+            }
         }
+
         if (op === "+") {
             setValue(value + 1);
         }
@@ -38,9 +41,9 @@ export default function MenuOption(props) {
             <div class="preco">
                 <span>R$ {price}</span>
                 <div class="contador">
-                    <ion-icon onClick={() => calcValue("-")} name="remove-outline"></ion-icon>
+                    <ion-icon onClick={(e) => calcValue(e, "-")} name="remove-outline"></ion-icon>
                     <span>{value}</span>
-                    <ion-icon onClick={() => calcValue("+")} name="add-outline"></ion-icon>
+                    <ion-icon onClick={(e) => calcValue(e, "+")} name="add-outline"></ion-icon>
                 </div>
             </div>
         </div>
