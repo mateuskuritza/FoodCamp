@@ -134,27 +134,23 @@ function App() {
         <>
             <Router>
 
-
+                <Header />
 
                 <Switch>
-
                     <Route path="/confirm">
-                        <ConfirmScreen />
+                        <div class="menu">
+                            <ConfirmScreen />
+                        </div>
                     </Route>
 
                     <Route path="/">
-                        <Header />
                         <div class="menu">
                             <MenuContainer data={allOptions.pratos} setQuantities={setQuantities} quantities={quantities} />
                             <MenuContainer data={allOptions.bebidas} setQuantities={setQuantities} quantities={quantities} />
                             <MenuContainer data={allOptions.sobremesas} setQuantities={setQuantities} quantities={quantities} />
                         </div>
                         <Footer buttonDisable={buttonDisable} />
-
                     </Route>
-
-
-
                 </Switch>
             </Router>
         </>

@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 export default function ConfirmScreen() {
 
     return (
-        <div class="overlay">
+        <>
+            <div class="confirmar-titulo">Revise seu pedido</div>
             <div class="confirmar-pedido">
-                <div class="titulo">Confirme seu pedido</div>
                 <ul>
                     <li class="prato">
                         <div class="nome">Frango Yin Yang</div>
@@ -24,9 +24,9 @@ export default function ConfirmScreen() {
                         <div>R$ 27,70</div>
                     </li>
                 </ul>
-                <button class="confirmar">Tudo certo, pode pedir!</button>
-                <button class="cancelar"><Link to="/">Cancelar</Link></button>
             </div>
-        </div>
+            <button class="confirmar-button confirmar">Tudo certo, pode pedir!</button>
+            <button class="confirmar-button cancelar"><Link to="/">Cancelar</Link></button>
+        </>
     );
 }
