@@ -1,14 +1,18 @@
+import "./styles/reset.css";
+import "./styles/style.css";
+
 import ReactDOM from 'react-dom';
 import React, { useState } from 'react';
-import MenuContainer from './MenuContainer';
-import Footer from './Footer';
-import Header from './Header';
-import ConfirmScreen from './ConfirmScreen';
+import MenuContainer from './components/Menu/MenuContainer';
+import Footer from './components/Footer/Footer.js';
+import Header from './components/Header/Header.js';
+import ConfirmScreen from './components/ConfirmScreen/ConfirmScreen';
 import {
     BrowserRouter as Router,
     Switch,
     Route
 } from "react-router-dom";
+
 
 function App() {
 

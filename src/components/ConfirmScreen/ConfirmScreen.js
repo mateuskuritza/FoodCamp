@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import "./confirmScreen.css";
 
 export default function ConfirmScreen(props) {
 
@@ -35,23 +36,23 @@ export default function ConfirmScreen(props) {
     return (
         <>
             <div className="confirmar-titulo">Revise seu pedido</div>
-            <div className="confirmar-pedido">
+            <div className="pedido">
                 <ul>
                     {pratos.map(element => (
-                        <li className="prato">
-                            <div className="nome">{element.title}</div>
+                        <li>
+                            <div>{element.title}</div>
                             <div className="preco">{element.price} (x{element.quantity})</div>
                         </li>
                     ))}
                     {bebidas.map(element => (
-                        <li className="bebida">
-                            <div className="nome">{element.title}</div>
+                        <li>
+                            <div>{element.title}</div>
                             <div className="preco">{element.price} (x{element.quantity})</div>
                         </li>
                     ))}
                     {sobremesas.map(element => (
-                        <li className="sobremesa">
-                            <div className="nome">{element.title}</div>
+                        <li>
+                            <div>{element.title}</div>
                             <div className="preco">{element.price} (x{element.quantity})</div>
                         </li>
                     ))}
@@ -61,8 +62,8 @@ export default function ConfirmScreen(props) {
                     </li>
                 </ul>
             </div>
-            <button className="confirmar-button confirmar" onClick={confirmOrder}>Tudo certo, pode pedir!</button>
-            <button className="confirmar-button cancelar" onClick={() => setQuantities(Array(9).fill(0))}><Link to="/">Cancelar</Link></button>
+            <button className="confirmar" onClick={confirmOrder}>Tudo certo, pode pedir!</button>
+            <button className="cancelar" onClick={() => setQuantities(Array(9).fill(0))}><Link to="/">Cancelar</Link></button>
         </>
     );
 }

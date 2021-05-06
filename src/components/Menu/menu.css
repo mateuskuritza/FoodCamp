@@ -1,0 +1,92 @@
+.secao {
+    margin-bottom: 12px;
+}
+
+.secao .opcoes {
+    overflow-x: scroll;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.secao > .titulo {
+    font-family: 'Righteous', cursive;
+    font-size: 26px;
+    letter-spacing: -0.018em;
+}
+
+.secao .opcoes {
+    display: flex;
+}
+
+.secao .opcoes .opcao {
+    width: 172px;
+    padding: 18px 14px;
+    border-radius: 9px;
+    background-color: white;
+    box-shadow: 0 0 10px -4px rgba(0, 0, 0, .25);
+    margin-right: 16px;
+}
+
+.secao .opcoes .opcao img {
+    width: 144px;
+    height: 87px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.secao .opcoes .opcao .titulo {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 11px 0 15px;
+}
+
+.secao .opcoes .opcao .descricao {
+    font-size: 15px;
+    color: #A6A6A6;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
+.secao .opcoes .opcao .fundo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.secao .opcoes .opcao .preco span {
+    font-size: 16px;
+}
+
+.preco{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.opcao .contador {
+    opacity: 0;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.opcao .contador span{
+    margin: 0 2px;
+}
+
+.contador ion-icon:first-of-type{
+    color: red;
+}
+
+.contador ion-icon:last-of-type{
+    color: green;
+}
+
+.menu .secao .opcoes .opcao.selecionado .contador {
+    opacity: 1;
+}
+
+.menu .secao .opcoes .opcao.selecionado {
+    border: 5px solid #32B72F;
+    padding: 13px 9px;
+}

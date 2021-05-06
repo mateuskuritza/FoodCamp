@@ -1,4 +1,5 @@
 import MenuOption from "./MenuOption";
+import "./menu.css";
 
 export default function MenuContainer(props) {
 
