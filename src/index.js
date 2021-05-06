@@ -118,18 +118,11 @@ function App() {
         setChangedButton(true);
     }
 
-    if (changedButton && (pratosSelecionados.length === 0 || bebidasSelecionadas.length === 0 || sobremesasSelecionadas.length === 0)) {
+    if (changedButton && (!pratosSelecionados.length || !bebidasSelecionadas.length || !sobremesasSelecionadas.length)) {
         setButtonDisable(true);
         setChangedButton(false);
     }
 
-    let resultado = 0;
-
-    pratosSelecionados.forEach(element => {
-        resultado += element.price * element.quantity;
-    })
-
-    console.log(resultado);
     return (
         <>
             <Router>
@@ -139,7 +132,7 @@ function App() {
                 <Switch>
                     <Route path="/confirm">
                         <div class="menu">
-                            <ConfirmScreen />
+                            <ConfirmScreen setQuantities={setQuantities} pratos={pratosSelecionados} bebidas={bebidasSelecionadas} sobremesas={sobremesasSelecionadas} />
                         </div>
                     </Route>
 
