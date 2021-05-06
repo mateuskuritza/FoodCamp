@@ -131,13 +131,13 @@ function App() {
 
                 <Switch>
                     <Route path="/confirm">
-                        <div class="menu">
+                        <div className="menu">
                             <ConfirmScreen setQuantities={setQuantities} pratos={pratosSelecionados} bebidas={bebidasSelecionadas} sobremesas={sobremesasSelecionadas} />
                         </div>
                     </Route>
 
                     <Route path="/">
-                        <div class="menu">
+                        <div className="menu">
                             <MenuContainer data={allOptions.pratos} setQuantities={setQuantities} quantities={quantities} />
                             <MenuContainer data={allOptions.bebidas} setQuantities={setQuantities} quantities={quantities} />
                             <MenuContainer data={allOptions.sobremesas} setQuantities={setQuantities} quantities={quantities} />

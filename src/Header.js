@@ -1,8 +1,8 @@
 export default function Header() {
     return (
-        <div class="header">
-            <div class="titulo">FoodCamp</div>
-            <div class="subtitulo">Sua comida em 6 minutos</div>
+        <div className="header">
+            <div className="titulo">FoodCamp</div>
+            <div className="subtitulo">Sua comida em 6 minutos</div>
         </div>
     );
 }

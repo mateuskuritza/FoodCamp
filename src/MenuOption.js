@@ -30,15 +30,15 @@ export default function MenuOption(props) {
 
     return (
         <div
-            class={"opcao" + (selected ? " selecionado" : "")}
+            className={"opcao" + (selected ? " selecionado" : "")}
             id={id} onClick={() => selected ? "" : (setSelected(true), calcQuantity(id, "+"))}
         >
             <img alt={alt} src={src} />
-            <div class="titulo">{title}</div>
-            <div class="descricao">{description}</div>
-            <div class="preco">
+            <div className="titulo">{title}</div>
+            <div className="descricao">{description}</div>
+            <div className="preco">
                 <span>R$ {price}</span>
-                <div class="contador">
+                <div className="contador">
                     <ion-icon
                         onClick={() => calcQuantity(id, "-")}
                         name="remove-outline">

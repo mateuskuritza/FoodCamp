@@ -7,9 +7,9 @@ export default function MenuContainer(props) {
 
     return (
         <>
-            <div class="secao">
-                <div class="titulo">{title}</div>
-                <div class="opcoes">
+            <div className="secao">
+                <div className="titulo">{title}</div>
+                <div className="opcoes">
                     {content.map(element => <MenuOption {...element} setQuantities={setQuantities} quantities={quantities} />)}
                 </div>
             </div>

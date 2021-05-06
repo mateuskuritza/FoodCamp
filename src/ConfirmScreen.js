@@ -34,35 +34,35 @@ export default function ConfirmScreen(props) {
 
     return (
         <>
-            <div class="confirmar-titulo">Revise seu pedido</div>
-            <div class="confirmar-pedido">
+            <div className="confirmar-titulo">Revise seu pedido</div>
+            <div className="confirmar-pedido">
                 <ul>
                     {pratos.map(element => (
-                        <li class="prato">
-                            <div class="nome">{element.title}</div>
-                            <div class="preco">{element.price} (x{element.quantity})</div>
+                        <li className="prato">
+                            <div className="nome">{element.title}</div>
+                            <div className="preco">{element.price} (x{element.quantity})</div>
                         </li>
                     ))}
                     {bebidas.map(element => (
-                        <li class="bebida">
-                            <div class="nome">{element.title}</div>
-                            <div class="preco">{element.price} (x{element.quantity})</div>
+                        <li className="bebida">
+                            <div className="nome">{element.title}</div>
+                            <div className="preco">{element.price} (x{element.quantity})</div>
                         </li>
                     ))}
                     {sobremesas.map(element => (
-                        <li class="sobremesa">
-                            <div class="nome">{element.title}</div>
-                            <div class="preco">{element.price} (x{element.quantity})</div>
+                        <li className="sobremesa">
+                            <div className="nome">{element.title}</div>
+                            <div className="preco">{element.price} (x{element.quantity})</div>
                         </li>
                     ))}
-                    <li class="total">
+                    <li className="total">
                         <div>Total</div>
                         <div>R$ {resultado}</div>
                     </li>
                 </ul>
             </div>
-            <button class="confirmar-button confirmar" onClick={confirmOrder}>Tudo certo, pode pedir!</button>
-            <button class="confirmar-button cancelar" onClick={() => setQuantities(Array(9).fill(0))}><Link to="/">Cancelar</Link></button>
+            <button className="confirmar-button confirmar" onClick={confirmOrder}>Tudo certo, pode pedir!</button>
+            <button className="confirmar-button cancelar" onClick={() => setQuantities(Array(9).fill(0))}><Link to="/">Cancelar</Link></button>
         </>
     );
 }

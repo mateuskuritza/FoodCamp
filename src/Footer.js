@@ -9,11 +9,11 @@ export default function Footer(props) {
     if (buttonDisable) {
         button = (<a href="#">Selecione os 3 itens<br></br>para fechar o pedido</a>)
     } else {
-        button = (<Link class="ativo" to="/confirm">Fechar pedido</Link>)
+        button = (<Link className="ativo" to="/confirm">Fechar pedido</Link>)
     }
 
     return (
-        <div class="footer">
+        <div className="footer">
             {button}
         </div>
     );
