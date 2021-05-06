@@ -6,16 +6,13 @@
     overflow-x: scroll;
     width: 100%;
     padding: 10px 0;
+    display: flex;
 }
 
 .secao > .titulo {
     font-family: 'Righteous', cursive;
     font-size: 26px;
     letter-spacing: -0.018em;
-}
-
-.secao .opcoes {
-    display: flex;
 }
 
 .secao .opcoes .opcao {
@@ -25,6 +22,7 @@
     background-color: white;
     box-shadow: 0 0 10px -4px rgba(0, 0, 0, .25);
     margin-right: 16px;
+    cursor: pointer;
 }
 
 .secao .opcoes .opcao img {
@@ -76,10 +74,12 @@
 
 .contador ion-icon:first-of-type{
     color: red;
+    cursor: pointer;
 }
 
 .contador ion-icon:last-of-type{
     color: green;
+    cursor: pointer;
 }
 
 .menu .secao .opcoes .opcao.selecionado .contador {
@@ -89,4 +89,5 @@
 .menu .secao .opcoes .opcao.selecionado {
     border: 5px solid #32B72F;
     padding: 13px 9px;
+    cursor: default;
 }

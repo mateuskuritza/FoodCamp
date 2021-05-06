@@ -37,6 +37,7 @@
   align-items: center;
   border: none;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .confirmar {
