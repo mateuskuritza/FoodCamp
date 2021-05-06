@@ -21,9 +21,11 @@ export default function ConfirmScreen(props) {
 
         const messageText = `
         Olá, gostaria de fazer o pedido:
-    - Prato:${pratos.map(element => ` ${element.title + ' *' + (element.quantity + "x*")}`)};
-    - Bebida:${bebidas.map(element => ` ${element.title + ' *' + (element.quantity + "x*")}`)};
-    - Sobremesa:${sobremesas.map(element => ` ${element.title + ' *' + (element.quantity + "x*")}`)};
+
+    *- Prato:*${pratos.map(element => ` ${element.title + ' *' + (element.quantity + "x*")}`)};
+    *- Bebida:*${bebidas.map(element => ` ${element.title + ' *' + (element.quantity + "x*")}`)};
+    *- Sobremesa:*${sobremesas.map(element => ` ${element.title + ' *' + (element.quantity + "x*")}`)};
+    
 *Total: R$ ${resultado}*
         `;
         const messageTextEncoded = encodeURIComponent(messageText);
