@@ -8,7 +8,7 @@ export default function Footer(props) {
     let button = "";
 
     if (buttonDisable) {
-        button = (<a href="#">Selecione os 3 itens<br></br>para fechar o pedido</a>)
+        button = (<span>Selecione os 3 itens<br></br>para fechar o pedido</span>)
     } else {
         button = (<Link className="ativo" to="/confirm">Fechar pedido</Link>)
     }
