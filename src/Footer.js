@@ -1,12 +1,20 @@
+import { Link } from "react-router-dom";
+
 export default function Footer(props) {
 
-    const { state } = props;
+    let { buttonDisable } = props;
+
+    let button = "";
+
+    if (buttonDisable) {
+        button = (<a href="#">Selecione os 3 itens<br></br>para fechar o pedido</a>)
+    } else {
+        button = (<Link class="ativo" to="/confirm">Fechar pedido</Link>)
+    }
 
     return (
-        <div class={"footer" + (state ? " hidden" : " ")}>
-            <a href="https://www.google.com/" class="fazer-pedido">
-                Selecione os 3 itens<br></br>para fechar o pedido
-        </a>
+        <div class="footer">
+            {button}
         </div>
     );
 }

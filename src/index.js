@@ -4,6 +4,11 @@ import MenuContainer from './MenuContainer';
 import Footer from './Footer';
 import Header from './Header';
 import ConfirmScreen from './ConfirmScreen';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route
+} from "react-router-dom";
 
 function App() {
 
@@ -123,19 +128,35 @@ function App() {
     pratosSelecionados.forEach(element => {
         resultado += element.price * element.quantity;
     })
+
     console.log(resultado);
     return (
         <>
-            <ConfirmScreen />
-            <Header />
+            <Router>
 
-            <div class="menu">
-                <MenuContainer data={allOptions.pratos} setQuantities={setQuantities} quantities={quantities} />
-                <MenuContainer data={allOptions.bebidas} setQuantities={setQuantities} quantities={quantities} />
-                <MenuContainer data={allOptions.sobremesas} setQuantities={setQuantities} quantities={quantities} />
-            </div>
 
-            <Footer state={buttonDisable} />
+
+                <Switch>
+
+                    <Route path="/confirm">
+                        <ConfirmScreen />
+                    </Route>
+
+                    <Route path="/">
+                        <Header />
+                        <div class="menu">
+                            <MenuContainer data={allOptions.pratos} setQuantities={setQuantities} quantities={quantities} />
+                            <MenuContainer data={allOptions.bebidas} setQuantities={setQuantities} quantities={quantities} />
+                            <MenuContainer data={allOptions.sobremesas} setQuantities={setQuantities} quantities={quantities} />
+                        </div>
+                        <Footer buttonDisable={buttonDisable} />
+
+                    </Route>
+
+
+
+                </Switch>
+            </Router>
         </>
     );
 }

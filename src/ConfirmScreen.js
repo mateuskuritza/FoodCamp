@@ -1,6 +1,9 @@
-export default function ConfirmScreen(props) {
+import { Link } from "react-router-dom";
+
+export default function ConfirmScreen() {
+
     return (
-        <div class="overlay hidden">
+        <div class="overlay">
             <div class="confirmar-pedido">
                 <div class="titulo">Confirme seu pedido</div>
                 <ul>
@@ -22,7 +25,7 @@ export default function ConfirmScreen(props) {
                     </li>
                 </ul>
                 <button class="confirmar">Tudo certo, pode pedir!</button>
-                <button class="cancelar">Cancelar</button>
+                <button class="cancelar"><Link to="/">Cancelar</Link></button>
             </div>
         </div>
     );
