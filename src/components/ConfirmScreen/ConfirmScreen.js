@@ -25,7 +25,7 @@ export default function ConfirmScreen(props) {
     *- Prato:*${pratos.map(element => ` ${element.title + ' *' + (element.quantity + "x*")}`)};
     *- Bebida:*${bebidas.map(element => ` ${element.title + ' *' + (element.quantity + "x*")}`)};
     *- Sobremesa:*${sobremesas.map(element => ` ${element.title + ' *' + (element.quantity + "x*")}`)};
-    
+
 *Total: R$ ${resultado}*
         `;
         const messageTextEncoded = encodeURIComponent(messageText);
@@ -65,7 +65,7 @@ export default function ConfirmScreen(props) {
                 </ul>
             </div>
             <button className="confirmar" onClick={confirmOrder}>Tudo certo, pode pedir!</button>
-            <button className="cancelar" onClick={() => setQuantities(Array(9).fill(0))}><Link to="/">Cancelar</Link></button>
+            <Link to="/"><button className="cancelar" onClick={() => setQuantities(Array(9).fill(0))}>Cancelar</button></Link>
         </>
     );
 }

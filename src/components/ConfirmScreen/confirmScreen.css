@@ -40,18 +40,56 @@
   cursor: pointer;
 }
 
-.confirmar {
-  margin: 33px auto 0px auto;
-  background-color: #50D074;
-  color: #FFFFFF;
-  font-size: 22px;
-  height: 52px;
-  border-radius: 100px;
-}
 
 .cancelar {
   color: #777777;
   background-color: transparent;
   font-size: 20px;
   margin-top: 10px;
+  height: 52px;
+  border-radius: 100px;
+  position: relative;
+  width: 100%;
 }
+
+.cancelar:hover::before{
+  font-size: 22px;
+  content: "oh No! :(";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 52px;
+  border-radius: 100px;
+  color: white;
+  position: absolute;
+  background-color: red;
+  animation: ohNo 6s linear;
+  width: 40%;
+}
+
+@keyframes ohNo {
+  0% {width: 40%; font-size: 22px;}
+  50% {width: 100%; font-size: 30px;}
+  100% {width: 40%; font-size: 22px;}
+}
+
+.confirmar {
+  margin: 33px auto 0px auto;
+  color: #FFFFFF;
+  font-size: 22px;
+  height: 52px;
+  border-radius: 100px;
+  animation: changeBackground 5s linear infinite
+}
+
+.confirmar:hover{
+  transition: 200ms;
+  transform: scale(1.1);
+}
+
+@keyframes changeBackground {
+  0% {background-color: #4fb66c;}
+  50% {background-color: #184d27;}
+  100% {background-color: #4fb66c;}
+}
+
