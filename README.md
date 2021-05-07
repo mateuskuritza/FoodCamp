@@ -12,6 +12,10 @@ Acesse a página clicando **<a href="https://projeto8-react-food-camp.vercel.app
 
 <img src="public/imgs/react_foodcamp.gif" />
 
+Após confirmar o pedido, é enviada uma mensagem para o Whatsapp da empresa, como no exemplo abaixo:
+
+<img src="public/imgs/whats_message_example.png" />
+
 
 
 
