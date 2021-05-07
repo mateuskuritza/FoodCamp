@@ -1,4 +1,4 @@
-#    :black_joker: Jogo da memória de papagaios muito loucos :bird:
+#    :stew: FoodCamp - SPA (single page application) :hamburger:
 
 > Página desenvolvida utilizando **CSS**, **HTML**,**JavaScript** e **React**. 
 
@@ -10,7 +10,9 @@ Acesse a página clicando **<a href="https://projeto8-react-food-camp.vercel.app
 
 ​																									Preview da aplicação
 
-<video src="./public/imgs/react_foodcamp.mp4" />
+<img src="public/imgs/react_foodcamp.gif" />
+
+
 
 
 
