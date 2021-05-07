@@ -20,8 +20,8 @@ function App() {
     const [changedButton, setChangedButton] = useState(false);
 
 
-    const allOptions = {
-        pratos: {
+    const allOptions = [
+        {
             title: "Primeiro, seu prato"
             , content: [
                 {
@@ -51,7 +51,7 @@ function App() {
                 }
             ]
         }
-        , bebidas: {
+        , {
             title: "Agora, sua bebida"
             , content: [
                 {
@@ -81,7 +81,7 @@ function App() {
                 }
             ]
         }
-        , sobremesas: {
+        , {
             title: "Por fim, sua sobremesa"
             , content: [
                 {
@@ -111,11 +111,10 @@ function App() {
                 }
             ]
         }
-    };
+    ];
 
-    const pratosSelecionados = allOptions.pratos.content.filter(element => element.quantity !== 0);
-    const bebidasSelecionadas = allOptions.bebidas.content.filter(element => element.quantity !== 0);
-    const sobremesasSelecionadas = allOptions.sobremesas.content.filter(element => element.quantity !== 0);
+
+    const [pratosSelecionados, bebidasSelecionadas, sobremesasSelecionadas] = allOptions.map(element => element.content.filter(element => element.quantity !== 0))
 
     if (!changedButton && pratosSelecionados.length && bebidasSelecionadas.length && sobremesasSelecionadas.length) {
         setButtonDisable(false);
@@ -142,9 +141,7 @@ function App() {
 
                     <Route path="/">
                         <div className="menu">
-                            <MenuContainer data={allOptions.pratos} setQuantities={setQuantities} quantities={quantities} />
-                            <MenuContainer data={allOptions.bebidas} setQuantities={setQuantities} quantities={quantities} />
-                            <MenuContainer data={allOptions.sobremesas} setQuantities={setQuantities} quantities={quantities} />
+                            {allOptions.map(element => <MenuContainer data={element} setQuantities={setQuantities} quantities={quantities} />)}
                         </div>
                         <Footer buttonDisable={buttonDisable} />
                     </Route>

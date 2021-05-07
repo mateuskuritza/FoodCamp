@@ -4,7 +4,6 @@ import "./footer.css";
 export default function Footer(props) {
 
     let { buttonDisable } = props;
-
     let button = "";
 
     if (buttonDisable) {

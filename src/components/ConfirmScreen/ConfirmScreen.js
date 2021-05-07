@@ -4,12 +4,11 @@ import "./confirmScreen.css";
 export default function ConfirmScreen(props) {
 
     const { pratos, bebidas, sobremesas, setQuantities } = props;
+    const selecionados = [pratos, bebidas, sobremesas];
 
     function calcTotal() {
         let resultado = 0;
-        pratos.forEach(element => resultado += (parseFloat(element.price) * element.quantity));
-        bebidas.forEach(element => resultado += (parseFloat(element.price) * element.quantity));
-        sobremesas.forEach(element => resultado += (parseFloat(element.price) * element.quantity));
+        selecionados.forEach(foodType => foodType.forEach(food => resultado += (food.price * food.quantity)));
         return resultado;
     }
 
@@ -17,8 +16,6 @@ export default function ConfirmScreen(props) {
 
     function confirmOrder() {
         const whatsNumber = "5542998043116";
-        const whatsLink = `https://wa.me/${whatsNumber}?text=`;
-
         const messageText = `
         Olá, gostaria de fazer o pedido:
 
@@ -26,11 +23,9 @@ export default function ConfirmScreen(props) {
     *- Bebida:*${bebidas.map(element => ` ${element.title + ' *' + (element.quantity + "x*")}`)};
     *- Sobremesa:*${sobremesas.map(element => ` ${element.title + ' *' + (element.quantity + "x*")}`)};
 
-*Total: R$ ${resultado}*
-        `;
+*Total: R$ ${resultado}*`;
         const messageTextEncoded = encodeURIComponent(messageText);
-
-        const whatsMessageLink = whatsLink + messageTextEncoded;
+        const whatsMessageLink = `https://wa.me/${whatsNumber}?text=` + messageTextEncoded;
 
         window.open(whatsMessageLink);
     }
@@ -40,24 +35,16 @@ export default function ConfirmScreen(props) {
             <div className="confirmar-titulo">Revise seu pedido</div>
             <div className="pedido">
                 <ul>
-                    {pratos.map(element => (
-                        <li>
-                            <div>{element.title}</div>
-                            <div className="preco">{element.price} (x{element.quantity})</div>
-                        </li>
+
+                    {selecionados.map(foodType => (
+                        foodType.map(food => (
+                            <li>
+                                <div>{food.title}</div>
+                                <div className="preco">{food.price} (x{food.quantity})</div>
+                            </li>
+                        ))
                     ))}
-                    {bebidas.map(element => (
-                        <li>
-                            <div>{element.title}</div>
-                            <div className="preco">{element.price} (x{element.quantity})</div>
-                        </li>
-                    ))}
-                    {sobremesas.map(element => (
-                        <li>
-                            <div>{element.title}</div>
-                            <div className="preco">{element.price} (x{element.quantity})</div>
-                        </li>
-                    ))}
+
                     <li className="total">
                         <div>Total</div>
                         <div>R$ {resultado}</div>
