@@ -1,9 +1,6 @@
-#    :stew: FoodCamp - SPA (single page application) :hamburger:
+#    :stew: FoodCamp :hamburger:
 
-> Página desenvolvida utilizando **CSS**, **HTML**,**JavaScript** e **React**. 
-
-> O projeto faz parte do bootcamp "Desenvolvimento Web Full-Stack" do **Responde Aí**
-
+> Página desenvolvida utilizando **CSS**, **HTML**, **JavaScript** e **React**. 
 
 
 Acesse a página clicando **<a href="https://projeto8-react-food-camp.vercel.app/">AQUI</a>**
@@ -17,16 +14,11 @@ Após confirmar o pedido, é enviada uma mensagem para o Whatsapp da empresa, co
 <img src="public/imgs/whats_message_example.png" />
 
 
+### Instruções de uso:
 
-
-
-
-#### :wrench: ​​Principais pontos: 
-
-+ Em construção;
-
-
-
-##### :page_with_curl: ​Fontes úteis para o desenvolvimento desse projeto: 
-
-> Em construção;
+  1. Clone esse repositório
+  2. Instale as dependências com
+    ```npm i```
+  3. Inicie com o comando
+    ```npm start```
+  4. Por fim acesse http://localhost:3000 no seu navegador preferido :)
